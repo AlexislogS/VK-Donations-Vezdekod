@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		EA685AF1250B7DF7008DDC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF0250B7DF7008DDC65 /* AppDelegate.swift */; };
 		EA685AF3250B7DF7008DDC65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF2250B7DF7008DDC65 /* SceneDelegate.swift */; };
-		EA685AF5250B7DF7008DDC65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF4250B7DF7008DDC65 /* ViewController.swift */; };
+		EA685AF5250B7DF7008DDC65 /* ChooseDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF4250B7DF7008DDC65 /* ChooseDonationViewController.swift */; };
 		EA685AF8250B7DF7008DDC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA685AF6250B7DF7008DDC65 /* Main.storyboard */; };
 		EA685AFA250B7DF9008DDC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA685AF9250B7DF9008DDC65 /* Assets.xcassets */; };
 		EA685AFD250B7DF9008DDC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA685AFB250B7DF9008DDC65 /* LaunchScreen.storyboard */; };
+		EA685B05250BAFE7008DDC65 /* NewDonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685B04250BAFE7008DDC65 /* NewDonationTableViewController.swift */; };
+		EA685B0C250BBC13008DDC65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685B0B250BBC13008DDC65 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA685AED250B7DF7008DDC65 /* VK Donations (Vezdekod).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Donations (Vezdekod).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA685AF0250B7DF7008DDC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA685AF2250B7DF7008DDC65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA685AF4250B7DF7008DDC65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA685AF4250B7DF7008DDC65 /* ChooseDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseDonationViewController.swift; sourceTree = "<group>"; };
 		EA685AF7250B7DF7008DDC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA685AF9250B7DF9008DDC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA685AFC250B7DF9008DDC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA685AFE250B7DF9008DDC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA685B04250BAFE7008DDC65 /* NewDonationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDonationTableViewController.swift; sourceTree = "<group>"; };
+		EA685B0B250BBC13008DDC65 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		EA685AEF250B7DF7008DDC65 /* VK Donations (Vezdekod) */ = {
 			isa = PBXGroup;
 			children = (
-				EA685AF0250B7DF7008DDC65 /* AppDelegate.swift */,
-				EA685AF2250B7DF7008DDC65 /* SceneDelegate.swift */,
-				EA685AF4250B7DF7008DDC65 /* ViewController.swift */,
-				EA685AF6250B7DF7008DDC65 /* Main.storyboard */,
-				EA685AF9250B7DF9008DDC65 /* Assets.xcassets */,
-				EA685AFB250B7DF9008DDC65 /* LaunchScreen.storyboard */,
-				EA685AFE250B7DF9008DDC65 /* Info.plist */,
+				EA685B06250BBB79008DDC65 /* Views */,
+				EA685B09250BBBB3008DDC65 /* Controllers */,
+				EA685B07250BBB83008DDC65 /* Resources */,
+				EA685B08250BBBAA008DDC65 /* Application */,
+				EA685B0A250BBBC0008DDC65 /* Configuration */,
 			);
 			path = "VK Donations (Vezdekod)";
+			sourceTree = "<group>";
+		};
+		EA685B06250BBB79008DDC65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA685AF6250B7DF7008DDC65 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA685B07250BBB83008DDC65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA685B0B250BBC13008DDC65 /* Constants.swift */,
+				EA685AF9250B7DF9008DDC65 /* Assets.xcassets */,
+				EA685AFB250B7DF9008DDC65 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA685B08250BBBAA008DDC65 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EA685AF0250B7DF7008DDC65 /* AppDelegate.swift */,
+				EA685AF2250B7DF7008DDC65 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EA685B09250BBBB3008DDC65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA685AF4250B7DF7008DDC65 /* ChooseDonationViewController.swift */,
+				EA685B04250BAFE7008DDC65 /* NewDonationTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EA685B0A250BBBC0008DDC65 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EA685AFE250B7DF9008DDC65 /* Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA685AF5250B7DF7008DDC65 /* ViewController.swift in Sources */,
+				EA685B0C250BBC13008DDC65 /* Constants.swift in Sources */,
+				EA685B05250BAFE7008DDC65 /* NewDonationTableViewController.swift in Sources */,
+				EA685AF5250B7DF7008DDC65 /* ChooseDonationViewController.swift in Sources */,
 				EA685AF1250B7DF7008DDC65 /* AppDelegate.swift in Sources */,
 				EA685AF3250B7DF7008DDC65 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG5F626PKK;
-				INFOPLIST_FILE = "VK Donations (Vezdekod)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/VK Donations (Vezdekod)/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UG5F626PKK;
-				INFOPLIST_FILE = "VK Donations (Vezdekod)/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/VK Donations (Vezdekod)/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
