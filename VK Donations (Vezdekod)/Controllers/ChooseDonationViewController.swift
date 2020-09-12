@@ -11,7 +11,7 @@ import UIKit
 final class ChooseDonationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == SegueID.regularDonation,
+        if segue.identifier == SegueID.regularDonation.rawValue,
             let newDonationVC = segue.destination as? NewDonationTableViewController {
             newDonationVC.regularAmountLabelText = Text.amountLabel
             newDonationVC.regularAmountPlaceholderText = Text.placeholder
