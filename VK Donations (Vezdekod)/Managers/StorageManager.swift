@@ -41,7 +41,6 @@ final class StorageManager {
         donation.text = text
         donation.amount = amount
         donation.target = target
-        donation.decriptionText = "vvvv"
         try? self.persistentContainer.viewContext.save()
         completion(donation)
     }
