@@ -22,4 +22,6 @@ enum AlertTitle {
     static let failedToGetImage = "Failed to get image"
     static let failedToFetchDonations = "Failed to fetch donations"
     static let pleaseTryAgain = "Failed to get image"
+    static let wrongInput = "Wrong input"
+    static let pleaseFill = "Please fill all fields"
 }

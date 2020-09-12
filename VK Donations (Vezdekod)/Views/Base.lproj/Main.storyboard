@@ -360,11 +360,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="SR5-m4-wtG">
-                            <rect key="frame" x="0.0" y="388" width="375" height="303"/>
+                            <rect key="frame" x="0.0" y="495" width="375" height="203"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghU-7P-dyh">
-                                    <rect key="frame" x="12" y="247" width="351" height="44"/>
+                                    <rect key="frame" x="12" y="147" width="351" height="44"/>
                                     <state key="normal" image="Style 1_ Primary-2"/>
                                     <connections>
                                         <segue destination="H3D-CA-h9h" kind="presentation" identifier="postSegue" modalPresentationStyle="fullScreen" id="NMk-zg-0M8"/>
@@ -473,11 +473,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="96" id="c9s-2f-OXB">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="96"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="203" id="c9s-2f-OXB">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="203"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c9s-2f-OXB" id="8TA-em-pXS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата окончания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-Jc-3U2">
@@ -487,21 +487,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-oB-8d2">
-                                                    <rect key="frame" x="12" y="37" width="351" height="47"/>
+                                                    <rect key="frame" x="12" y="37" width="351" height="44"/>
                                                     <state key="normal" image="Size Y_ Regular Default-1"/>
                                                     <connections>
                                                         <action selector="chooseDatePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="BSe-Xg-qDT"/>
+                                                        <action selector="datePickerButton:" destination="zLT-OE-k8X" eventType="touchUpInside" id="lKZ-hI-gnX"/>
+                                                    </connections>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQW-dG-4KP">
+                                                    <rect key="frame" x="12" y="81" width="351" height="44"/>
+                                                    <state key="normal" image="Container blank"/>
+                                                    <connections>
+                                                        <action selector="datePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="KYp-zJ-19K"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="9WK-oB-8d2" secondAttribute="bottom" constant="12" id="JCI-le-FeP"/>
                                                 <constraint firstItem="9WK-oB-8d2" firstAttribute="top" secondItem="7Bh-Jc-3U2" secondAttribute="bottom" constant="8" id="b0C-cK-omd"/>
+                                                <constraint firstAttribute="trailing" secondItem="kQW-dG-4KP" secondAttribute="trailing" constant="12" id="eLc-fe-UMI"/>
                                                 <constraint firstAttribute="trailing" secondItem="7Bh-Jc-3U2" secondAttribute="trailing" constant="12" id="iKQ-vg-MdO"/>
                                                 <constraint firstItem="7Bh-Jc-3U2" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="kk4-aw-WaW"/>
                                                 <constraint firstAttribute="trailing" secondItem="9WK-oB-8d2" secondAttribute="trailing" constant="12" id="kyG-q7-RFw"/>
+                                                <constraint firstItem="kQW-dG-4KP" firstAttribute="top" secondItem="9WK-oB-8d2" secondAttribute="bottom" id="uYY-Tn-XuO"/>
                                                 <constraint firstItem="9WK-oB-8d2" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="vgW-4Q-zfr"/>
                                                 <constraint firstItem="7Bh-Jc-3U2" firstAttribute="top" secondItem="8TA-em-pXS" secondAttribute="top" constant="12" id="x1d-Yt-FSN"/>
+                                                <constraint firstItem="kQW-dG-4KP" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="xPM-f6-CWj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -520,14 +530,17 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="chooseDateButton" destination="9WK-oB-8d2" id="CvM-KW-eT9"/>
                         <outlet property="createButton" destination="ghU-7P-dyh" id="QCe-AJ-Q8p"/>
+                        <outlet property="dateButton" destination="kQW-dG-4KP" id="nn3-SC-BPa"/>
                         <outlet property="exactTimeButton" destination="iBd-hX-PeX" id="hg8-HG-8es"/>
                         <outlet property="whenCollectAmountButton" destination="DQf-tX-dcO" id="dhN-mv-kPv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUI-Yf-NU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zLT-OE-k8X" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3495" y="-304"/>
+            <point key="canvasLocation" x="3493.5999999999999" y="-304.43349753694582"/>
         </scene>
         <!--Posting View Controller-->
         <scene sceneID="JT4-ZZ-hWq">
@@ -759,7 +772,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Новости" id="6B1-6e-QkQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="epX-x0-rhU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="epX-x0-rhU">
                             <connections>
                                 <segue destination="IBZ-dJ-xx3" kind="presentation" modalPresentationStyle="fullScreen" id="i2z-6R-cd9"/>
                             </connections>
@@ -858,13 +871,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qk8-0w-nyi"/>
+        <segue reference="NMk-zg-0M8"/>
         <segue reference="8F0-5H-3gQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Banner Regular" width="351" height="62"/>
         <image name="Banner Regular-1" width="351" height="62"/>
         <image name="Container" width="351" height="44"/>
+        <image name="Container blank" width="351" height="44"/>
         <image name="Cover" width="352.33334350585938" height="141.33332824707031"/>
         <image name="Progress" width="237" height="4"/>
         <image name="Size Y_ Regular Default" width="351" height="44"/>

@@ -16,6 +16,8 @@ final class AdditionalTableViewController: UITableViewController {
             whenCollectAmountButton.setImage(#imageLiteral(resourceName: "radio_on_24"), for: .selected)
         }
     }
+    @IBOutlet private weak var dateButton: UIButton!
+    @IBOutlet private weak var chooseDateButton: UIButton!
     @IBOutlet private weak var exactTimeButton: UIButton! {
         didSet {
             exactTimeButton.setImage(#imageLiteral(resourceName: "radio_on_24"), for: .selected)
@@ -39,6 +41,8 @@ final class AdditionalTableViewController: UITableViewController {
         exactTimeButton.isSelected = false
         createButton.isEnabled = true
         title = "Оформление"
+        chooseDateButton.setImage(UIImage(named: "Size Y_ Regular Default-1"), for: .normal)
+        chooseDateButton.isEnabled = false
     }
     
     @IBAction private func exactTimePressed(_ sender: UIButton) {
@@ -46,10 +50,16 @@ final class AdditionalTableViewController: UITableViewController {
         whenCollectAmountButton.isSelected = false
         createButton.isEnabled = false
         title = "Дополнительно"
+        chooseDateButton.isEnabled = true
     }
     
     @IBAction private func chooseDatePressed(_ sender: UIButton) {
-        sender.setImage(UIImage(named: "Container-1"), for: .normal)
+        dateButton.isHidden.toggle()
+    }
+    
+    @IBAction private func datePressed(_ sender: UIButton) {
+        chooseDateButton.setImage(UIImage(named: "Container-1"), for: .normal)
+        dateButton.isHidden = true
         createButton.isEnabled = true
     }
 }

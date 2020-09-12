@@ -28,7 +28,7 @@ final class DonationCell: UITableViewCell {
         progressView.progress += 0.2
         if progressView.progress == 1 {
             sender.setImage(#imageLiteral(resourceName: "Style 6_ Commerce"), for: .normal)
-            progressView.tintColor = .green
+            progressView.tintColor = UIColor(red: 75, green: 179, blue: 75, alpha: 1)
             amountLabel.text = "Вся сумма собрана!"
         }
     }

@@ -27,6 +27,7 @@ final class NewDonationTableViewController: UITableViewController {
     
     var regularAmountLabelText: String?
     var regularAmountPlaceholderText: String?
+    private var imageChanged = false
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,22 +52,26 @@ final class NewDonationTableViewController: UITableViewController {
         }
     }
     
-    
-    
     @IBAction private func clearButtonPressed() {
         donationImageView.contentMode = .scaleAspectFit
         donationImageView.image = UIImage(named: "Cover")
+        imageChanged = false
         clearImageButton.isHidden = true
     }
     
     @IBAction private func nextButtonPressed() {
-        if regularAmountLabelText == nil {
-            if titleTextFiled.hasText,
-                donationImageView.image != UIImage(named: "Cover") {
+        if titleTextFiled.hasText,
+            amountTextFiled.hasText,
+            targetTextFiled.hasText,
+            descriptionTextFiled.hasText,
+            imageChanged {
+            if regularAmountLabelText == nil {
                 performSegue(withIdentifier: SegueID.additionalScreen.rawValue, sender: nil)
+            } else {
+                performSegue(withIdentifier: SegueID.postSegue.rawValue, sender: nil)
             }
         } else {
-            performSegue(withIdentifier: SegueID.postSegue.rawValue, sender: nil)
+            showAlert(with: AlertTitle.wrongInput, and: AlertTitle.pleaseFill)
         }
     }
     
@@ -147,6 +152,7 @@ extension NewDonationTableViewController: UIImagePickerControllerDelegate, UINav
         if let image = (info[.editedImage] ?? info[.originalImage]) as? UIImage {
             donationImageView.contentMode = .scaleAspectFill
             donationImageView.image = image
+            imageChanged = true
             clearImageButton.isHidden = false
         }
         picker.presentingViewController?.dismiss(animated: true)
