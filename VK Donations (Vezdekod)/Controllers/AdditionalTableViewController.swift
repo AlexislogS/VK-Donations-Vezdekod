@@ -47,4 +47,9 @@ final class AdditionalTableViewController: UITableViewController {
         createButton.isEnabled = false
         title = "Дополнительно"
     }
+    
+    @IBAction private func chooseDatePressed(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "Container-1"), for: .normal)
+        createButton.isEnabled = true
+    }
 }

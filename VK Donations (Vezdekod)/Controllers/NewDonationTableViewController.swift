@@ -44,8 +44,13 @@ final class NewDonationTableViewController: UITableViewController {
             let additionalVC = segue.destination as? AdditionalTableViewController {
             additionalVC.titleText = titleTextFiled.text
             additionalVC.image = donationImageView.image
+        } else if segue.identifier == SegueID.postSegue.rawValue,
+            let postVC = segue.destination as? PostingViewController {
+            postVC.titleText = titleTextFiled.text
+            postVC.image = donationImageView.image
         }
     }
+    
     
     
     @IBAction private func clearButtonPressed() {
@@ -60,6 +65,8 @@ final class NewDonationTableViewController: UITableViewController {
                 donationImageView.image != UIImage(named: "Cover") {
                 performSegue(withIdentifier: SegueID.additionalScreen.rawValue, sender: nil)
             }
+        } else {
+            performSegue(withIdentifier: SegueID.postSegue.rawValue, sender: nil)
         }
     }
     

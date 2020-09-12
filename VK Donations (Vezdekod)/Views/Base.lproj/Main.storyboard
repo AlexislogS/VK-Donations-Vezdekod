@@ -344,6 +344,7 @@
                         <outlet property="targetTextFiled" destination="eIy-BO-KfC" id="Ro1-RL-6AK"/>
                         <outlet property="titleTextFiled" destination="wPh-mH-eHk" id="EiX-nC-psu"/>
                         <segue destination="j4Z-T1-4Jf" kind="show" identifier="additionalScreen" id="88V-XX-1cO"/>
+                        <segue destination="H3D-CA-h9h" kind="presentation" identifier="postSegue" modalPresentationStyle="fullScreen" id="Qk8-0w-nyi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6od-Z3-XqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -488,6 +489,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-oB-8d2">
                                                     <rect key="frame" x="12" y="37" width="351" height="47"/>
                                                     <state key="normal" image="Size Y_ Regular Default-1"/>
+                                                    <connections>
+                                                        <action selector="chooseDatePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="BSe-Xg-qDT"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -523,7 +527,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUI-Yf-NU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3528.8000000000002" y="116.74876847290641"/>
+            <point key="canvasLocation" x="3495" y="-304"/>
         </scene>
         <!--Posting View Controller-->
         <scene sceneID="JT4-ZZ-hWq">
@@ -854,6 +858,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Qk8-0w-nyi"/>
         <segue reference="8F0-5H-3gQ"/>
     </inferredMetricsTieBreakers>
     <resources>
