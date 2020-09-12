@@ -28,8 +28,12 @@ final class DonationCell: UITableViewCell {
         progressView.progress += 0.2
         if progressView.progress == 1 {
             sender.setImage(#imageLiteral(resourceName: "Style 6_ Commerce"), for: .normal)
-            progressView.tintColor = UIColor(red: 75, green: 179, blue: 75, alpha: 1)
+            progressView.tintColor = UIColor(red: 75/255, green: 179/255, blue: 75/255, alpha: 1)
             amountLabel.text = "Вся сумма собрана!"
+            let animator = UIViewPropertyAnimator(duration: 0.7, dampingRatio: 0.4) {
+                self.transform = .init(scaleX: 0.9, y: 0.9)
+            }
+            animator.startAnimation()
         }
     }
 }
