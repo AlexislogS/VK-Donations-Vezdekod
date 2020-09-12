@@ -41,11 +41,12 @@ final class StorageManager {
         donation.text = text
         donation.amount = amount
         donation.target = target
+        donation.decriptionText = "vvvv"
         try? self.persistentContainer.viewContext.save()
         completion(donation)
     }
     
-    func savePost(post: String?, donation: Donation) {
+    func savePost(post: String, donation: Donation) {
         donation.decriptionText = post
         try? self.persistentContainer.viewContext.save()
     }

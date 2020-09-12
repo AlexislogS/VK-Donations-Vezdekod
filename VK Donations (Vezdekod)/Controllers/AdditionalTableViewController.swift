@@ -34,6 +34,10 @@ final class AdditionalTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
     @IBAction private func whenCollectAmountPressed() {
         whenCollectAmountButton.isSelected = true
         exactTimeButton.isSelected = false

@@ -10,7 +10,7 @@
         <!--Пожертвования-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="VK_Donations__Vezdekod_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,11 @@
                     <navigationItem key="navigationItem" title="Пожертвования" id="2F9-8L-GHw">
                         <barButtonItem key="backBarButtonItem" title=" " id="0pl-t7-wkS"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="stop" id="0Ik-Nb-jWA"/>
+                            <barButtonItem systemItem="stop" id="0Ik-Nb-jWA">
+                                <connections>
+                                    <action selector="close:" destination="BYZ-38-t0r" id="0Wa-7l-KM7"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="ellipsis" catalog="system" id="Tga-mX-umc"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -331,7 +335,11 @@
                     <navigationItem key="navigationItem" title="Целевой сбор" id="gNa-8Y-Jyq">
                         <barButtonItem key="backBarButtonItem" title=" " id="M4V-yh-Z9p"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="stop" id="4Rm-Qq-TsX"/>
+                            <barButtonItem systemItem="stop" id="4Rm-Qq-TsX">
+                                <connections>
+                                    <action selector="close:" destination="kzQ-NZ-ksy" id="NQy-fE-Zth"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="ellipsis" catalog="system" id="kQM-Jy-D6j"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -524,7 +532,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Дополнительно" id="TOb-Yq-Jlq">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="stop" id="WYS-ZQ-Zg4"/>
+                            <barButtonItem systemItem="stop" id="WYS-ZQ-Zg4">
+                                <connections>
+                                    <action selector="close:" destination="j4Z-T1-4Jf" id="CuR-pl-LY1"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="ellipsis" catalog="system" id="91u-Fi-icY"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -927,7 +939,11 @@
                     <navigationItem key="navigationItem" title="Тип сбора" id="x8M-D2-gyT">
                         <barButtonItem key="backBarButtonItem" title=" " id="f3V-CM-dR4"/>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="stop" id="fT2-ME-1od"/>
+                            <barButtonItem systemItem="stop" id="fT2-ME-1od">
+                                <connections>
+                                    <action selector="close:" destination="Adh-NC-Qhh" id="Hi4-gn-ReA"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Item" image="ellipsis" catalog="system" id="bjo-Tn-usi"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -976,7 +992,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qk8-0w-nyi"/>
+        <segue reference="NMk-zg-0M8"/>
         <segue reference="8F0-5H-3gQ"/>
     </inferredMetricsTieBreakers>
     <resources>

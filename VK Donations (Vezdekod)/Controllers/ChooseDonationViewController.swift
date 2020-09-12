@@ -18,4 +18,8 @@ final class ChooseDonationViewController: UIViewController {
             newDonationVC.title = Text.regularDonationTitle
         }
     }
+    
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }

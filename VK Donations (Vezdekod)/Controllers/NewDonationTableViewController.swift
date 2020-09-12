@@ -70,6 +70,10 @@ final class NewDonationTableViewController: UITableViewController {
         handleNextButton()
     }
     
+    @IBAction func close(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
     private func handleNextButton() {
         if titleTextFiled.hasText,
             amountTextFiled.hasText,

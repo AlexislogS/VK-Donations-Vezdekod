@@ -30,8 +30,8 @@ final class PostingViewController: UIViewController {
     }
     
     @IBAction func postButtonPressed(_ sender: UIBarButtonItem) {
-        if let donation = donation {
-            storageManager.savePost(post: donationTextView.text, donation: donation)
+        if let donation = donation, let post = donationTextView.text {
+            storageManager.savePost(post: post, donation: donation)
             presentingViewController?.presentingViewController?.dismiss(animated: true)
         }
     }

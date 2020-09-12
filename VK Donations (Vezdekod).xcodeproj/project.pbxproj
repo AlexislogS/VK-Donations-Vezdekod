@@ -10,6 +10,7 @@
 		EA3E2917250CB04E00BCF708 /* DetailDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E2916250CB04E00BCF708 /* DetailDonationViewController.swift */; };
 		EA3E291A250CBB0800BCF708 /* Donation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E2918250CBB0800BCF708 /* Donation+CoreDataClass.swift */; };
 		EA3E291B250CBB0800BCF708 /* Donation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E2919250CBB0800BCF708 /* Donation+CoreDataProperties.swift */; };
+		EA3E291D250CC6FD00BCF708 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E291C250CC6FD00BCF708 /* WelcomeViewController.swift */; };
 		EA66DAA4250C1D67004FCDAA /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAA3250C1D67004FCDAA /* PostingViewController.swift */; };
 		EA66DAA8250C20D5004FCDAA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAA7250C20D5004FCDAA /* StorageManager.swift */; };
 		EA66DAB0250C25C3004FCDAA /* NewsfeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAAF250C25C3004FCDAA /* NewsfeedTableViewController.swift */; };
@@ -32,6 +33,7 @@
 		EA3E2916250CB04E00BCF708 /* DetailDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDonationViewController.swift; sourceTree = "<group>"; };
 		EA3E2918250CBB0800BCF708 /* Donation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Donation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EA3E2919250CBB0800BCF708 /* Donation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Donation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EA3E291C250CC6FD00BCF708 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EA66DAA3250C1D67004FCDAA /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
 		EA66DAA7250C20D5004FCDAA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		EA66DAAF250C25C3004FCDAA /* NewsfeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		EA685B09250BBBB3008DDC65 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA3E291C250CC6FD00BCF708 /* WelcomeViewController.swift */,
 				EA685AF4250B7DF7008DDC65 /* ChooseDonationViewController.swift */,
 				EA685B04250BAFE7008DDC65 /* NewDonationTableViewController.swift */,
 				EA9DC7D7250BD80100B43C97 /* AdditionalTableViewController.swift */,
@@ -262,6 +265,7 @@
 				EA66DAB0250C25C3004FCDAA /* NewsfeedTableViewController.swift in Sources */,
 				EA66DAA4250C1D67004FCDAA /* PostingViewController.swift in Sources */,
 				EA685B0C250BBC13008DDC65 /* Constants.swift in Sources */,
+				EA3E291D250CC6FD00BCF708 /* WelcomeViewController.swift in Sources */,
 				EA3E2917250CB04E00BCF708 /* DetailDonationViewController.swift in Sources */,
 				EA685B05250BAFE7008DDC65 /* NewDonationTableViewController.swift in Sources */,
 				EA3E291A250CBB0800BCF708 /* Donation+CoreDataClass.swift in Sources */,

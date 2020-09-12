@@ -15,7 +15,7 @@ final class DetailDonationViewController: UIViewController {
     @IBOutlet private weak var donationTextView: UITextView!
     @IBOutlet private weak var donationTitle: UILabel!
     @IBOutlet private weak var amountLabel: UILabel!
-    @IBOutlet weak var targetLabel: UILabel!
+    @IBOutlet private weak var targetLabel: UILabel!
     
     var donation: Donation?
 
