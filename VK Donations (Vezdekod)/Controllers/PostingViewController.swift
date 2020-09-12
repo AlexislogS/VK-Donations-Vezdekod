@@ -19,7 +19,6 @@ final class PostingViewController: UIViewController {
     }
     
     var donation: Donation?
-    private let storageManager = StorageManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +29,9 @@ final class PostingViewController: UIViewController {
     }
     
     @IBAction func postButtonPressed(_ sender: UIBarButtonItem) {
-        if let donation = donation, let post = donationTextView.text {
-            storageManager.savePost(post: post, donation: donation)
-            presentingViewController?.presentingViewController?.dismiss(animated: true)
-        }
+        UserDefaults.standard.set(donationTextView.text, forKey: donation!.title!)
+        donation?.decriptionText = donationTextView.text
+        presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     
     @IBAction func cancelButtonPressed() {

@@ -10,7 +10,7 @@ import CoreData
 
 final class StorageManager {
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "DonationDataModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -43,11 +43,6 @@ final class StorageManager {
         donation.target = target
         try? self.persistentContainer.viewContext.save()
         completion(donation)
-    }
-    
-    func savePost(post: String, donation: Donation) {
-        donation.decriptionText = post
-        try? self.persistentContainer.viewContext.save()
     }
     
     // MARK: - Delete donations
