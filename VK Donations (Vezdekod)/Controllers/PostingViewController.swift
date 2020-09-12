@@ -18,19 +18,22 @@ final class PostingViewController: UIViewController {
         }
     }
     
-    var titleText: String?
-    var image: UIImage?
+    var donation: Donation?
     private let storageManager = StorageManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        donationTitleLabel.text = titleText
-        donationImageView.image = image
+        donationTitleLabel.text = donation?.title
+        if let imageData = donation?.image {
+            donationImageView.image = UIImage(data: imageData)
+        }
     }
     
     @IBAction func postButtonPressed(_ sender: UIBarButtonItem) {
-        storageManager.saveDonation(title: donationTitleLabel.text!, image: donationImageView.image!.pngData()!, description: donationTextView.text)
-        presentingViewController?.presentingViewController?.dismiss(animated: true)
+        if let donation = donation {
+            storageManager.savePost(post: donationTextView.text, donation: donation)
+            presentingViewController?.presentingViewController?.dismiss(animated: true)
+        }
     }
     
     @IBAction func cancelButtonPressed() {

@@ -25,14 +25,12 @@ final class AdditionalTableViewController: UITableViewController {
         }
     }
     
-    var titleText: String?
-    var image: UIImage?
+    var donation: Donation?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueID.postSegue.rawValue,
             let postingVC = segue.destination as? PostingViewController {
-            postingVC.titleText = titleText
-            postingVC.image = image
+            postingVC.donation = donation
         }
     }
     

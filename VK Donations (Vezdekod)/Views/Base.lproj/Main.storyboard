@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="308" width="375" height="196"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSC-b6-uSC">
-                                        <rect key="frame" x="100.33333333333331" y="48" width="174.33333333333337" height="38.333333333333343"/>
+                                        <rect key="frame" x="100.33333333333333" y="48" width="174.33333333333337" height="38.333333333333343"/>
                                         <string key="text">У Вас пока нет сборов.
 Начните доброе дело.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -824,9 +824,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-Ub-ucz">
-                                <rect key="frame" x="12" y="297" width="351" height="414"/>
+                                <rect key="frame" x="12" y="318" width="351" height="393"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Привет-привет, добряш!
+                                <string key="text">Привет-привет, добряш!
 
 Я создал это событие, чтобы показать какие у меня прекрасные добряши и буду счастлив, если получится вдохновить кого-нибудь хотя бы на маленький перевод в пользу фонда Юна. 
 
@@ -836,11 +836,17 @@
 
 ◾ А 10 000 рублей позволят провести курс занятий с кинологом по социализации сложной собаки. Чтобы она легче нашла свой дом.
 
-В благотворительности не бывает маленьких сумм, поэтому если вы хотите помочь, то переведите любую сумму, будь-то 10 рублей или 1000 💚</mutableString>
+В благотворительности не бывает маленьких сумм, поэтому если вы хотите помочь, то переведите любую сумму, будь-то 10 рублей или 1000 💚</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVO-0x-2Vd">
+                                <rect key="frame" x="12" y="285" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -849,19 +855,22 @@
                             <constraint firstItem="G6j-SL-h45" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="9iX-SM-ZUM"/>
                             <constraint firstItem="vyU-Xd-YQI" firstAttribute="trailing" secondItem="CCd-tO-LkE" secondAttribute="trailing" id="9lH-XF-gfI"/>
                             <constraint firstItem="RPR-CH-6qe" firstAttribute="leading" secondItem="ETd-6h-ITm" secondAttribute="leading" constant="12" id="CDa-rR-2TJ"/>
-                            <constraint firstItem="Gcq-Ub-ucz" firstAttribute="top" secondItem="JGP-Ca-Bwh" secondAttribute="bottom" constant="24" id="G7K-jw-ybM"/>
                             <constraint firstItem="RPR-CH-6qe" firstAttribute="top" secondItem="G6j-SL-h45" secondAttribute="bottom" constant="8" id="Jeg-0Q-0Wp"/>
                             <constraint firstItem="JGP-Ca-Bwh" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="Q0W-0O-sOg"/>
                             <constraint firstItem="G6j-SL-h45" firstAttribute="top" secondItem="Gcq-Ub-ucz" secondAttribute="bottom" constant="24" id="Rsk-W3-T4z"/>
+                            <constraint firstItem="AVO-0x-2Vd" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="SlM-eu-B4u"/>
                             <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="Gcq-Ub-ucz" secondAttribute="trailing" constant="12" id="Umk-Mu-pyw"/>
                             <constraint firstItem="qxU-s1-LFB" firstAttribute="leading" secondItem="G6j-SL-h45" secondAttribute="trailing" constant="9" id="ep3-Wg-IWu"/>
                             <constraint firstItem="vyU-Xd-YQI" firstAttribute="top" secondItem="CCd-tO-LkE" secondAttribute="top" id="fHD-AS-2Xc"/>
+                            <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="AVO-0x-2Vd" secondAttribute="trailing" constant="12" id="gq0-wJ-03g"/>
                             <constraint firstItem="vyU-Xd-YQI" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" id="hBy-mk-YBK"/>
                             <constraint firstItem="CCd-tO-LkE" firstAttribute="bottom" secondItem="qxU-s1-LFB" secondAttribute="bottom" constant="12" id="ikt-GB-Xdg"/>
                             <constraint firstItem="Gcq-Ub-ucz" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="l99-24-Bxx"/>
                             <constraint firstItem="qxU-s1-LFB" firstAttribute="leading" secondItem="RPR-CH-6qe" secondAttribute="trailing" constant="25" id="mp8-V1-nUl"/>
                             <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="JGP-Ca-Bwh" secondAttribute="trailing" constant="12" id="nCh-Dv-obi"/>
+                            <constraint firstItem="Gcq-Ub-ucz" firstAttribute="top" secondItem="AVO-0x-2Vd" secondAttribute="bottom" constant="12" id="qM3-Zb-656"/>
                             <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="qxU-s1-LFB" secondAttribute="trailing" constant="12" id="sO4-A1-6Gi"/>
+                            <constraint firstItem="AVO-0x-2Vd" firstAttribute="top" secondItem="JGP-Ca-Bwh" secondAttribute="bottom" constant="12" id="zNI-Qz-W1t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CCd-tO-LkE"/>
                     </view>
@@ -872,6 +881,7 @@
                         <outlet property="donationProgressView" destination="RPR-CH-6qe" id="Asv-Kx-xD6"/>
                         <outlet property="donationTextView" destination="Gcq-Ub-ucz" id="PCt-os-Hdw"/>
                         <outlet property="donationTitle" destination="JGP-Ca-Bwh" id="0gv-VN-rKU"/>
+                        <outlet property="targetLabel" destination="AVO-0x-2Vd" id="ED0-Cs-LlK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5y-UN-RYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

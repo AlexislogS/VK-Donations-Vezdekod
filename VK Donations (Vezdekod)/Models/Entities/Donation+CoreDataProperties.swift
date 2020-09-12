@@ -17,8 +17,11 @@ extension Donation {
         return NSFetchRequest<Donation>(entityName: "Donation")
     }
 
+    @NSManaged public var decriptionText: String?
     @NSManaged public var image: Data?
     @NSManaged public var title: String?
-    @NSManaged public var decriptionText: String?
+    @NSManaged public var text: String?
+    @NSManaged public var amount: String?
+    @NSManaged public var target: String?
 
 }

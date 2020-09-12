@@ -15,6 +15,7 @@ final class DetailDonationViewController: UIViewController {
     @IBOutlet private weak var donationTextView: UITextView!
     @IBOutlet private weak var donationTitle: UILabel!
     @IBOutlet private weak var amountLabel: UILabel!
+    @IBOutlet weak var targetLabel: UILabel!
     
     var donation: Donation?
 
@@ -36,6 +37,8 @@ final class DetailDonationViewController: UIViewController {
     
     private func updateUI() {
         donationTitle.text = donation?.title
+        donationTextView.text = donation?.text
+        targetLabel.text = donation?.target
         if let imageData = donation?.image {
             donationImageView.image = UIImage(data: imageData)
         }

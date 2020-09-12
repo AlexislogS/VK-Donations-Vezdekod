@@ -25,6 +25,8 @@ final class NewDonationTableViewController: UITableViewController {
     
     @IBOutlet weak var amountLabel: UILabel!
     
+    private let storageManager = StorageManager()
+    
     var regularAmountLabelText: String?
     var regularAmountPlaceholderText: String?
     private var imageChanged = false
@@ -41,14 +43,19 @@ final class NewDonationTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == SegueID.additionalScreen.rawValue,
-            let additionalVC = segue.destination as? AdditionalTableViewController {
-            additionalVC.titleText = titleTextFiled.text
-            additionalVC.image = donationImageView.image
-        } else if segue.identifier == SegueID.postSegue.rawValue,
-            let postVC = segue.destination as? PostingViewController {
-            postVC.titleText = titleTextFiled.text
-            postVC.image = donationImageView.image
+        if let title = titleTextFiled.text,
+            let imageData = donationImageView.image?.pngData(),
+            let text = descriptionTextFiled.text,
+            let target = targetTextFiled.text, let amount = amountTextFiled.text {
+            storageManager.saveDonation(title: title, image: imageData, text: text, amount: amount, target: target) {
+                if segue.identifier == SegueID.additionalScreen.rawValue,
+                    let additionalVC = segue.destination as? AdditionalTableViewController {
+                    additionalVC.donation = $0
+                } else if segue.identifier == SegueID.postSegue.rawValue,
+                    let postVC = segue.destination as? PostingViewController {
+                    postVC.donation = $0
+                }
+            }
         }
     }
     

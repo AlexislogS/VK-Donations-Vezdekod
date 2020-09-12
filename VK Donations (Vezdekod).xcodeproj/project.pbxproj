@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EA3E2917250CB04E00BCF708 /* DetailDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E2916250CB04E00BCF708 /* DetailDonationViewController.swift */; };
+		EA3E291A250CBB0800BCF708 /* Donation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E2918250CBB0800BCF708 /* Donation+CoreDataClass.swift */; };
+		EA3E291B250CBB0800BCF708 /* Donation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E2919250CBB0800BCF708 /* Donation+CoreDataProperties.swift */; };
 		EA66DAA4250C1D67004FCDAA /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAA3250C1D67004FCDAA /* PostingViewController.swift */; };
 		EA66DAA8250C20D5004FCDAA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAA7250C20D5004FCDAA /* StorageManager.swift */; };
 		EA66DAB0250C25C3004FCDAA /* NewsfeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAAF250C25C3004FCDAA /* NewsfeedTableViewController.swift */; };
@@ -15,8 +17,6 @@
 		EA66DABD250C2A39004FCDAA /* DonationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DABC250C2A39004FCDAA /* DonationCell.swift */; };
 		EA66DABF250C2BE3004FCDAA /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DABE250C2BE3004FCDAA /* UIViewController+.swift */; };
 		EA66DAC3250C38B9004FCDAA /* Notification.Name+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAC2250C38B9004FCDAA /* Notification.Name+.swift */; };
-		EA66DAC6250C4793004FCDAA /* Donation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAC4250C4793004FCDAA /* Donation+CoreDataClass.swift */; };
-		EA66DAC7250C4793004FCDAA /* Donation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66DAC5250C4793004FCDAA /* Donation+CoreDataProperties.swift */; };
 		EA685AF1250B7DF7008DDC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF0250B7DF7008DDC65 /* AppDelegate.swift */; };
 		EA685AF3250B7DF7008DDC65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF2250B7DF7008DDC65 /* SceneDelegate.swift */; };
 		EA685AF5250B7DF7008DDC65 /* ChooseDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685AF4250B7DF7008DDC65 /* ChooseDonationViewController.swift */; };
@@ -30,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		EA3E2916250CB04E00BCF708 /* DetailDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDonationViewController.swift; sourceTree = "<group>"; };
+		EA3E2918250CBB0800BCF708 /* Donation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Donation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EA3E2919250CBB0800BCF708 /* Donation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Donation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EA66DAA3250C1D67004FCDAA /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
 		EA66DAA7250C20D5004FCDAA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		EA66DAAF250C25C3004FCDAA /* NewsfeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewController.swift; sourceTree = "<group>"; };
@@ -37,8 +39,6 @@
 		EA66DABC250C2A39004FCDAA /* DonationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCell.swift; sourceTree = "<group>"; };
 		EA66DABE250C2BE3004FCDAA /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		EA66DAC2250C38B9004FCDAA /* Notification.Name+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+.swift"; sourceTree = "<group>"; };
-		EA66DAC4250C4793004FCDAA /* Donation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Donation+CoreDataClass.swift"; sourceTree = "<group>"; };
-		EA66DAC5250C4793004FCDAA /* Donation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Donation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EA685AED250B7DF7008DDC65 /* VK Donations (Vezdekod).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Donations (Vezdekod).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA685AF0250B7DF7008DDC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA685AF2250B7DF7008DDC65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		EA66DABB250C2880004FCDAA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				EA66DAC4250C4793004FCDAA /* Donation+CoreDataClass.swift */,
-				EA66DAC5250C4793004FCDAA /* Donation+CoreDataProperties.swift */,
+				EA3E2918250CBB0800BCF708 /* Donation+CoreDataClass.swift */,
+				EA3E2919250CBB0800BCF708 /* Donation+CoreDataProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -258,15 +258,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9DC7D8250BD80100B43C97 /* AdditionalTableViewController.swift in Sources */,
-				EA66DAC7250C4793004FCDAA /* Donation+CoreDataProperties.swift in Sources */,
-				EA66DAC6250C4793004FCDAA /* Donation+CoreDataClass.swift in Sources */,
 				EA66DABD250C2A39004FCDAA /* DonationCell.swift in Sources */,
 				EA66DAB0250C25C3004FCDAA /* NewsfeedTableViewController.swift in Sources */,
 				EA66DAA4250C1D67004FCDAA /* PostingViewController.swift in Sources */,
 				EA685B0C250BBC13008DDC65 /* Constants.swift in Sources */,
 				EA3E2917250CB04E00BCF708 /* DetailDonationViewController.swift in Sources */,
 				EA685B05250BAFE7008DDC65 /* NewDonationTableViewController.swift in Sources */,
+				EA3E291A250CBB0800BCF708 /* Donation+CoreDataClass.swift in Sources */,
 				EA685AF5250B7DF7008DDC65 /* ChooseDonationViewController.swift in Sources */,
+				EA3E291B250CBB0800BCF708 /* Donation+CoreDataProperties.swift in Sources */,
 				EA685AF1250B7DF7008DDC65 /* AppDelegate.swift in Sources */,
 				EA685AF3250B7DF7008DDC65 /* SceneDelegate.swift in Sources */,
 				EA66DAB6250C27E7004FCDAA /* DonationDataModel.xcdatamodeld in Sources */,
