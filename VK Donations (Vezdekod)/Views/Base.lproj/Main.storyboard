@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="308" width="375" height="196"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSC-b6-uSC">
-                                        <rect key="frame" x="100.33333333333333" y="48" width="174.33333333333337" height="38.333333333333343"/>
+                                        <rect key="frame" x="100.33333333333331" y="48" width="174.33333333333337" height="38.333333333333343"/>
                                         <string key="text">У Вас пока нет сборов.
 Начните доброе дело.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -74,7 +74,7 @@
                         <sections>
                             <tableViewSection id="7Xh-dQ-Enl">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="152" id="rbI-Ic-V4l">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="152" id="rbI-Ic-V4l">
                                         <rect key="frame" x="0.0" y="28" width="375" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rbI-Ic-V4l" id="1js-zx-xmb">
@@ -436,7 +436,7 @@
                                                     </constraints>
                                                     <state key="normal" image="radio_off_24"/>
                                                     <connections>
-                                                        <action selector="whenCollectAmountPressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="dLg-4m-qzr"/>
+                                                        <action selector="whenCollectAmountPressed" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="MLm-yS-gxR"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В определённую дату" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-gh-fwV">
@@ -452,7 +452,7 @@
                                                     </constraints>
                                                     <state key="normal" image="radio_off_24"/>
                                                     <connections>
-                                                        <action selector="exactTimePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="Nlg-Np-vRf"/>
+                                                        <action selector="exactTimePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="1km-Th-NNQ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -490,15 +490,14 @@
                                                     <rect key="frame" x="12" y="37" width="351" height="44"/>
                                                     <state key="normal" image="Size Y_ Regular Default-1"/>
                                                     <connections>
-                                                        <action selector="chooseDatePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="BSe-Xg-qDT"/>
-                                                        <action selector="datePickerButton:" destination="zLT-OE-k8X" eventType="touchUpInside" id="lKZ-hI-gnX"/>
+                                                        <action selector="chooseDatePressed" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="p2u-2p-3AV"/>
                                                     </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQW-dG-4KP">
                                                     <rect key="frame" x="12" y="81" width="351" height="44"/>
                                                     <state key="normal" image="Container blank"/>
                                                     <connections>
-                                                        <action selector="datePressed:" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="KYp-zJ-19K"/>
+                                                        <action selector="datePressed" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="0oB-SG-cTK"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -538,7 +537,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUI-Yf-NU4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="zLT-OE-k8X" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3493.5999999999999" y="-304.43349753694582"/>
         </scene>
@@ -763,6 +761,7 @@
                                     <outlet property="donationImageView" destination="jvQ-RB-JyB" id="lJu-9o-cXm"/>
                                     <outlet property="progressView" destination="ltf-19-QCz" id="MCu-qk-aBJ"/>
                                     <outlet property="titleLabel" destination="cpA-lO-Tvs" id="n17-oq-r79"/>
+                                    <segue destination="ckX-Y1-4rn" kind="show" identifier="detainDonationSegue" id="zlO-YK-sML"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -772,6 +771,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Новости" id="6B1-6e-QkQ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XHr-Ol-C0i"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="epX-x0-rhU">
                             <connections>
                                 <segue destination="IBZ-dJ-xx3" kind="presentation" modalPresentationStyle="fullScreen" id="i2z-6R-cd9"/>
@@ -781,7 +781,102 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XZ-jZ-TDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695.20000000000005" y="117.48768472906404"/>
+            <point key="canvasLocation" x="-694" y="806"/>
+        </scene>
+        <!--Пожертвование-->
+        <scene sceneID="GeX-ov-Uu6">
+            <objects>
+                <viewController id="ckX-Y1-4rn" customClass="DetailDonationViewController" customModule="VK_Donations__Vezdekod_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETd-6h-ITm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добряши помогают котикам" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGP-Ca-Bwh">
+                                <rect key="frame" x="12" y="244" width="351" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vyU-Xd-YQI">
+                                <rect key="frame" x="0.0" y="88" width="375" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="h6f-Av-m87"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxU-s1-LFB">
+                                <rect key="frame" x="274" y="730" width="89" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="pfG-ed-oEa"/>
+                                </constraints>
+                                <state key="normal" image="Style 6_ Commerce"/>
+                                <connections>
+                                    <action selector="helpButtonPressed:" destination="ckX-Y1-4rn" eventType="touchUpInside" id="DOT-cb-1ao"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RPR-CH-6qe">
+                                <rect key="frame" x="12" y="760" width="237" height="2"/>
+                                <color key="tintColor" red="0.29411764705882354" green="0.70196078431372544" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Собрано 8 750 ₽ из 10 000 ₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6j-SL-h45">
+                                <rect key="frame" x="12" y="735" width="253" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-Ub-ucz">
+                                <rect key="frame" x="12" y="297" width="351" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Привет-привет, добряш!
+
+Я создал это событие, чтобы показать какие у меня прекрасные добряши и буду счастлив, если получится вдохновить кого-нибудь хотя бы на маленький перевод в пользу фонда Юна. 
+
+◾ Если получится собрать 1 000 рублей, то это будет 5 обработанных животных от блох и клещей.
+
+◾ Собранные 5 000 рублей превратятся в 25 кг корма для подопечных фонда.
+
+◾ А 10 000 рублей позволят провести курс занятий с кинологом по социализации сложной собаки. Чтобы она легче нашла свой дом.
+
+В благотворительности не бывает маленьких сумм, поэтому если вы хотите помочь, то переведите любую сумму, будь-то 10 рублей или 1000 💚</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JGP-Ca-Bwh" firstAttribute="top" secondItem="vyU-Xd-YQI" secondAttribute="bottom" constant="16" id="1D4-TO-BjZ"/>
+                            <constraint firstItem="CCd-tO-LkE" firstAttribute="bottom" secondItem="RPR-CH-6qe" secondAttribute="bottom" constant="16" id="7kZ-YF-9IT"/>
+                            <constraint firstItem="G6j-SL-h45" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="9iX-SM-ZUM"/>
+                            <constraint firstItem="vyU-Xd-YQI" firstAttribute="trailing" secondItem="CCd-tO-LkE" secondAttribute="trailing" id="9lH-XF-gfI"/>
+                            <constraint firstItem="RPR-CH-6qe" firstAttribute="leading" secondItem="ETd-6h-ITm" secondAttribute="leading" constant="12" id="CDa-rR-2TJ"/>
+                            <constraint firstItem="Gcq-Ub-ucz" firstAttribute="top" secondItem="JGP-Ca-Bwh" secondAttribute="bottom" constant="24" id="G7K-jw-ybM"/>
+                            <constraint firstItem="RPR-CH-6qe" firstAttribute="top" secondItem="G6j-SL-h45" secondAttribute="bottom" constant="8" id="Jeg-0Q-0Wp"/>
+                            <constraint firstItem="JGP-Ca-Bwh" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="Q0W-0O-sOg"/>
+                            <constraint firstItem="G6j-SL-h45" firstAttribute="top" secondItem="Gcq-Ub-ucz" secondAttribute="bottom" constant="24" id="Rsk-W3-T4z"/>
+                            <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="Gcq-Ub-ucz" secondAttribute="trailing" constant="12" id="Umk-Mu-pyw"/>
+                            <constraint firstItem="qxU-s1-LFB" firstAttribute="leading" secondItem="G6j-SL-h45" secondAttribute="trailing" constant="9" id="ep3-Wg-IWu"/>
+                            <constraint firstItem="vyU-Xd-YQI" firstAttribute="top" secondItem="CCd-tO-LkE" secondAttribute="top" id="fHD-AS-2Xc"/>
+                            <constraint firstItem="vyU-Xd-YQI" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" id="hBy-mk-YBK"/>
+                            <constraint firstItem="CCd-tO-LkE" firstAttribute="bottom" secondItem="qxU-s1-LFB" secondAttribute="bottom" constant="12" id="ikt-GB-Xdg"/>
+                            <constraint firstItem="Gcq-Ub-ucz" firstAttribute="leading" secondItem="CCd-tO-LkE" secondAttribute="leading" constant="12" id="l99-24-Bxx"/>
+                            <constraint firstItem="qxU-s1-LFB" firstAttribute="leading" secondItem="RPR-CH-6qe" secondAttribute="trailing" constant="25" id="mp8-V1-nUl"/>
+                            <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="JGP-Ca-Bwh" secondAttribute="trailing" constant="12" id="nCh-Dv-obi"/>
+                            <constraint firstItem="CCd-tO-LkE" firstAttribute="trailing" secondItem="qxU-s1-LFB" secondAttribute="trailing" constant="12" id="sO4-A1-6Gi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CCd-tO-LkE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Пожертвование" id="8Nx-En-lif"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="G6j-SL-h45" id="bjs-Ze-173"/>
+                        <outlet property="donationImageView" destination="vyU-Xd-YQI" id="hGo-eZ-57Q"/>
+                        <outlet property="donationProgressView" destination="RPR-CH-6qe" id="Asv-Kx-xD6"/>
+                        <outlet property="donationTextView" destination="Gcq-Ub-ucz" id="PCt-os-Hdw"/>
+                        <outlet property="donationTitle" destination="JGP-Ca-Bwh" id="0gv-VN-rKU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5y-UN-RYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="804.67980295566508"/>
         </scene>
         <!--Тип сбора-->
         <scene sceneID="XFL-a5-J8I">
@@ -867,11 +962,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hc-sV-flC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1535" y="118"/>
+            <point key="canvasLocation" x="-1534" y="806"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NMk-zg-0M8"/>
+        <segue reference="Qk8-0w-nyi"/>
         <segue reference="8F0-5H-3gQ"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -889,6 +984,7 @@
         <image name="Style 1_ Primary-2" width="351" height="44"/>
         <image name="Style 5_ Outline" width="86" height="30"/>
         <image name="Style 5_ Outline-1" width="86" height="30"/>
+        <image name="Style 6_ Commerce" width="89" height="36"/>
         <image name="dismiss_24" width="24" height="24"/>
         <image name="dismiss_overlay_24" width="24" height="24"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>

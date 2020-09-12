@@ -10,6 +10,7 @@ enum SegueID: String {
     case regularDonation
     case additionalScreen
     case postSegue
+    case detainDonationSegue
 }
 
 enum Text {

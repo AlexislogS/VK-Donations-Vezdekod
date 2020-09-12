@@ -42,6 +42,14 @@ final class NewsfeedTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueID.detainDonationSegue.rawValue,
+            let detailVC = segue.destination as? DetailDonationViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            detailVC.donation = donations[indexPath.row]
+        }
+    }
+    
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView,

@@ -36,7 +36,7 @@ final class AdditionalTableViewController: UITableViewController {
         }
     }
     
-    @IBAction private func whenCollectAmountPressed(_ sender: UIButton) {
+    @IBAction private func whenCollectAmountPressed() {
         whenCollectAmountButton.isSelected = true
         exactTimeButton.isSelected = false
         createButton.isEnabled = true
@@ -53,11 +53,11 @@ final class AdditionalTableViewController: UITableViewController {
         chooseDateButton.isEnabled = true
     }
     
-    @IBAction private func chooseDatePressed(_ sender: UIButton) {
+    @IBAction private func chooseDatePressed() {
         dateButton.isHidden.toggle()
     }
     
-    @IBAction private func datePressed(_ sender: UIButton) {
+    @IBAction private func datePressed() {
         chooseDateButton.setImage(UIImage(named: "Container-1"), for: .normal)
         dateButton.isHidden = true
         createButton.isEnabled = true
