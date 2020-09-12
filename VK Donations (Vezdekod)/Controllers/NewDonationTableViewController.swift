@@ -60,6 +60,10 @@ final class NewDonationTableViewController: UITableViewController {
     }
     
     @IBAction private func nextButtonPressed() {
+        handleNextButton()
+    }
+    
+    private func handleNextButton() {
         if titleTextFiled.hasText,
             amountTextFiled.hasText,
             targetTextFiled.hasText,
@@ -111,6 +115,7 @@ extension NewDonationTableViewController: UITextFieldDelegate {
             descriptionTextFiled.becomeFirstResponder()
         default:
             descriptionTextFiled.resignFirstResponder()
+            handleNextButton()
         }
         return true
     }

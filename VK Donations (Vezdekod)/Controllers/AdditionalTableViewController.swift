@@ -40,7 +40,6 @@ final class AdditionalTableViewController: UITableViewController {
         whenCollectAmountButton.isSelected = true
         exactTimeButton.isSelected = false
         createButton.isEnabled = true
-        title = "Оформление"
         chooseDateButton.setImage(UIImage(named: "Size Y_ Regular Default-1"), for: .normal)
         chooseDateButton.isEnabled = false
     }
@@ -49,7 +48,6 @@ final class AdditionalTableViewController: UITableViewController {
         exactTimeButton.isSelected = true
         whenCollectAmountButton.isSelected = false
         createButton.isEnabled = false
-        title = "Дополнительно"
         chooseDateButton.isEnabled = true
     }
     
