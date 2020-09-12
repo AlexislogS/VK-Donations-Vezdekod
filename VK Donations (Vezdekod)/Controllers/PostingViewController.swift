@@ -30,7 +30,6 @@ final class PostingViewController: UIViewController {
     
     @IBAction func postButtonPressed(_ sender: UIBarButtonItem) {
         UserDefaults.standard.set(donationTextView.text, forKey: donation!.title!)
-        donation?.decriptionText = donationTextView.text
         presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     

@@ -18,6 +18,7 @@ final class DonationCell: UITableViewCell {
     
     func configure(donation: Donation) {
         titleLabel.text = donation.title
+        amountLabel.text = donation.amount
         descriptionLabel.text = UserDefaults.standard.value(forKey: donation.title!) as? String
         if let imageData = donation.image {
             donationImageView.image = UIImage(data: imageData)

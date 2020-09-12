@@ -39,6 +39,7 @@ final class DetailDonationViewController: UIViewController {
         donationTitle.text = donation?.title
         donationTextView.text = donation?.text
         targetLabel.text = donation?.target
+        amountLabel.text = donation?.amount
         if let imageData = donation?.image {
             donationImageView.image = UIImage(data: imageData)
         }
