@@ -221,7 +221,7 @@
                                                     <rect key="frame" x="12" y="37" width="351" height="67"/>
                                                     <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="kzQ-NZ-ksy" id="80D-Kj-Sqc"/>
                                                     </connections>
@@ -368,7 +368,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="SR5-m4-wtG">
-                            <rect key="frame" x="0.0" y="495" width="375" height="203"/>
+                            <rect key="frame" x="0.0" y="622" width="375" height="203"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghU-7P-dyh">
@@ -481,11 +481,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="203" id="c9s-2f-OXB">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="203"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="330" id="c9s-2f-OXB">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="330"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c9s-2f-OXB" id="8TA-em-pXS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата окончания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-Jc-3U2">
@@ -501,24 +501,32 @@
                                                         <action selector="chooseDatePressed" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="p2u-2p-3AV"/>
                                                     </connections>
                                                 </button>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQW-dG-4KP">
-                                                    <rect key="frame" x="12" y="81" width="351" height="44"/>
-                                                    <state key="normal" image="Container blank"/>
+                                                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bxB-od-wcT">
+                                                    <rect key="frame" x="12" y="93" width="351" height="216"/>
                                                     <connections>
-                                                        <action selector="datePressed" destination="j4Z-T1-4Jf" eventType="touchUpInside" id="0oB-SG-cTK"/>
+                                                        <action selector="DatePicked" destination="j4Z-T1-4Jf" eventType="valueChanged" id="kOs-Ob-eEI"/>
                                                     </connections>
-                                                </button>
+                                                </datePicker>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVr-l6-DZI">
+                                                    <rect key="frame" x="40" y="49" width="295" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UVr-l6-DZI" secondAttribute="trailing" constant="24" id="4jA-3N-Bvp"/>
+                                                <constraint firstItem="bxB-od-wcT" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="BRl-cB-xJj"/>
+                                                <constraint firstAttribute="trailing" secondItem="bxB-od-wcT" secondAttribute="trailing" constant="12" id="QoZ-62-n1b"/>
                                                 <constraint firstItem="9WK-oB-8d2" firstAttribute="top" secondItem="7Bh-Jc-3U2" secondAttribute="bottom" constant="8" id="b0C-cK-omd"/>
-                                                <constraint firstAttribute="trailing" secondItem="kQW-dG-4KP" secondAttribute="trailing" constant="12" id="eLc-fe-UMI"/>
+                                                <constraint firstItem="bxB-od-wcT" firstAttribute="top" secondItem="9WK-oB-8d2" secondAttribute="bottom" constant="12" id="fEe-50-biv"/>
+                                                <constraint firstItem="UVr-l6-DZI" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leadingMargin" constant="24" id="fqz-IM-6Py"/>
                                                 <constraint firstAttribute="trailing" secondItem="7Bh-Jc-3U2" secondAttribute="trailing" constant="12" id="iKQ-vg-MdO"/>
                                                 <constraint firstItem="7Bh-Jc-3U2" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="kk4-aw-WaW"/>
                                                 <constraint firstAttribute="trailing" secondItem="9WK-oB-8d2" secondAttribute="trailing" constant="12" id="kyG-q7-RFw"/>
-                                                <constraint firstItem="kQW-dG-4KP" firstAttribute="top" secondItem="9WK-oB-8d2" secondAttribute="bottom" id="uYY-Tn-XuO"/>
                                                 <constraint firstItem="9WK-oB-8d2" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="vgW-4Q-zfr"/>
                                                 <constraint firstItem="7Bh-Jc-3U2" firstAttribute="top" secondItem="8TA-em-pXS" secondAttribute="top" constant="12" id="x1d-Yt-FSN"/>
-                                                <constraint firstItem="kQW-dG-4KP" firstAttribute="leading" secondItem="8TA-em-pXS" secondAttribute="leading" constant="12" id="xPM-f6-CWj"/>
+                                                <constraint firstItem="UVr-l6-DZI" firstAttribute="centerY" secondItem="9WK-oB-8d2" secondAttribute="centerY" id="xys-k0-dz7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -543,7 +551,8 @@
                     <connections>
                         <outlet property="chooseDateButton" destination="9WK-oB-8d2" id="CvM-KW-eT9"/>
                         <outlet property="createButton" destination="ghU-7P-dyh" id="QCe-AJ-Q8p"/>
-                        <outlet property="dateButton" destination="kQW-dG-4KP" id="nn3-SC-BPa"/>
+                        <outlet property="dateLabel" destination="UVr-l6-DZI" id="bqC-IU-taN"/>
+                        <outlet property="datePicker" destination="bxB-od-wcT" id="OvN-Za-1yP"/>
                         <outlet property="exactTimeButton" destination="iBd-hX-PeX" id="hg8-HG-8es"/>
                         <outlet property="whenCollectAmountButton" destination="DQf-tX-dcO" id="dhN-mv-kPv"/>
                     </connections>
@@ -999,7 +1008,6 @@
         <image name="Banner Regular" width="351" height="62"/>
         <image name="Banner Regular-1" width="351" height="62"/>
         <image name="Container" width="351" height="44"/>
-        <image name="Container blank" width="351" height="44"/>
         <image name="Cover" width="352.33334350585938" height="141.33332824707031"/>
         <image name="Progress" width="237" height="4"/>
         <image name="Size Y_ Regular Default" width="351" height="44"/>

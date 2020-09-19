@@ -11,13 +11,20 @@ import UIKit
 final class AdditionalTableViewController: UITableViewController {
     
     @IBOutlet private weak var createButton: UIButton!
+    @IBOutlet private weak var chooseDateButton: UIButton!
+    @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var whenCollectAmountButton: UIButton! {
         didSet {
             whenCollectAmountButton.setImage(#imageLiteral(resourceName: "radio_on_24"), for: .selected)
         }
     }
-    @IBOutlet private weak var dateButton: UIButton!
-    @IBOutlet private weak var chooseDateButton: UIButton!
+    @IBOutlet private weak var datePicker: UIDatePicker! {
+        didSet {
+            if let localeID = Locale.preferredLanguages.first {
+                datePicker.locale = Locale(identifier: localeID)
+            }
+        }
+    }
     @IBOutlet private weak var exactTimeButton: UIButton! {
         didSet {
             exactTimeButton.setImage(#imageLiteral(resourceName: "radio_on_24"), for: .selected)
@@ -44,6 +51,10 @@ final class AdditionalTableViewController: UITableViewController {
         createButton.isEnabled = true
         chooseDateButton.setImage(UIImage(named: "Size Y_ Regular Default-1"), for: .normal)
         chooseDateButton.isEnabled = false
+        dateLabel.isHidden = true
+        if !datePicker.isHidden {
+            datePicker.isHidden = true
+        }
     }
     
     @IBAction private func exactTimePressed(_ sender: UIButton) {
@@ -54,12 +65,15 @@ final class AdditionalTableViewController: UITableViewController {
     }
     
     @IBAction private func chooseDatePressed() {
-        dateButton.isHidden.toggle()
-    }
-    
-    @IBAction private func datePressed() {
+        datePicker.isHidden = datePicker.isHidden ? false : true
+        dateLabel.isHidden = false
+        dateLabel.text = datePicker.date.toString(format: "MMM d")
         chooseDateButton.setImage(UIImage(named: "Container-1"), for: .normal)
-        dateButton.isHidden = true
         createButton.isEnabled = true
     }
+    
+    @IBAction func DatePicked() {
+        dateLabel.text = datePicker.date.toString(format: "MMM d")
+    }
 }
+

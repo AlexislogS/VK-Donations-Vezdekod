@@ -71,9 +71,12 @@ final class NewsfeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let donation = donations[indexPath.row]
-        storageManager.delete(donation: donation)
-        donations.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+        if editingStyle == .delete {
+            let donation = donations[indexPath.row]
+            UserDefaults.standard.removeObject(forKey: donation.title!)
+            storageManager.delete(donation: donation)
+            donations.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }

@@ -26,6 +26,7 @@
 		EA685AFD250B7DF9008DDC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA685AFB250B7DF9008DDC65 /* LaunchScreen.storyboard */; };
 		EA685B05250BAFE7008DDC65 /* NewDonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685B04250BAFE7008DDC65 /* NewDonationTableViewController.swift */; };
 		EA685B0C250BBC13008DDC65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA685B0B250BBC13008DDC65 /* Constants.swift */; };
+		EA6DB64B2513C4DA00EAF5B4 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB64A2513C4DA00EAF5B4 /* Date+.swift */; };
 		EA9DC7D8250BD80100B43C97 /* AdditionalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC7D7250BD80100B43C97 /* AdditionalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		EA685AFE250B7DF9008DDC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA685B04250BAFE7008DDC65 /* NewDonationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDonationTableViewController.swift; sourceTree = "<group>"; };
 		EA685B0B250BBC13008DDC65 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EA6DB64A2513C4DA00EAF5B4 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		EA9DC7D7250BD80100B43C97 /* AdditionalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			children = (
 				EA66DABE250C2BE3004FCDAA /* UIViewController+.swift */,
 				EA66DAC2250C38B9004FCDAA /* Notification.Name+.swift */,
+				EA6DB64A2513C4DA00EAF5B4 /* Date+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				EA3E2917250CB04E00BCF708 /* DetailDonationViewController.swift in Sources */,
 				EA685B05250BAFE7008DDC65 /* NewDonationTableViewController.swift in Sources */,
 				EA3E291A250CBB0800BCF708 /* Donation+CoreDataClass.swift in Sources */,
+				EA6DB64B2513C4DA00EAF5B4 /* Date+.swift in Sources */,
 				EA685AF5250B7DF7008DDC65 /* ChooseDonationViewController.swift in Sources */,
 				EA3E291B250CBB0800BCF708 /* Donation+CoreDataProperties.swift in Sources */,
 				EA685AF1250B7DF7008DDC65 /* AppDelegate.swift in Sources */,

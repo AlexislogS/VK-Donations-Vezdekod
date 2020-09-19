@@ -16,6 +16,13 @@ final class DonationCell: UITableViewCell {
     @IBOutlet private weak var progressView: UIProgressView!
     @IBOutlet private weak var amountLabel: UILabel!
     
+    private var amount: Double {
+        if let text = amountLabel.text, let amount = Double(text){
+            return amount
+        }
+        return 0
+    }
+    
     func configure(donation: Donation) {
         titleLabel.text = donation.title
         amountLabel.text = donation.amount
